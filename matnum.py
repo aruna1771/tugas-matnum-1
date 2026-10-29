@@ -19,7 +19,7 @@ print("f(x) = e^x - 5x^2")
 print("Lebar awal =", abs(b - a))
 print()
 
-print("Iterasi |    a     |    c     |    b     |   f(a)   |   f(c)   |   f(b)   | Selang Baru | Lebar Baru")
+print("Iterasi |    a     |    c     |    b     |   f(a)   |   f(c)   |   f(b)   | Selang Baru | Lebar")
 print("-" * 125)
 
 while abs(b - a) > epsilon:
@@ -42,12 +42,12 @@ while abs(b - a) > epsilon:
         b_baru = b
 
     # Menghitung lebar interval
-    lebar_baru = abs(b_baru - a_baru)
+    lebar = abs(b_baru - a_baru)
 
     # Menampilkan hasil iterasi
     print(f"{iterasi:7d} | {a:.6f} | {c:.6f} | {b:.6f} | "
           f"{fa:8.6f} | {fc:8.6f} | {fb:8.6f} | "
-          f"{selang:11s} | {lebar_baru:.8f}")
+          f"{selang:11s} | {lebar:.8f}")
 
     # Memperbarui batas
     a = a_baru
